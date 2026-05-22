@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+
+body {
+    background-image: url("/static/pagina2.jpg");
+    background-size: cover;        /* cobre toda a tela */
+    background-repeat: no-repeat;  /* não repete */
+    background-position: center;   /* centraliza */
+    text-align: center;           /* centraliza o texto */
+    font-family: Arial, sans-serif; /* fonte legível */
+
+}
+
+h1 {
+    color: #20067e; /* branco */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* TÍTULO PRINCIPAL */
+h2 {
+    color: #ffffff; /* branco */
+    background-color: rgba(78, 218, 78, 0.5); /* fundo escuro transparente */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+</style>
+
+{% if operacao == '+' %}
+<style>
+body {
+    background-image: url("/static/adicao.jpg");
+}
+</style>
+
+{% elif operacao == '-' %}
+<style>
+body {
+    background-image: url("/static/subtracao.jpg");
+}
+</style>
+
+{% elif operacao == '*' %}
+<style>
+body {
+    background-image: url("/static/multiplicacao.jpg");
+}
+</style>
+
+{% elif operacao == '/' %}
+<style>
+body {
+    background-image: url("/static/divisao.jpg");
+}
+</style>
+
+{% endif %} 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Educação Matemática</title>
+</head>
+<body>
+    <h2><U><br>TECNOLOGIA COMO FERRAMENTA <br> NA <br> EDUCAÇÃO MATEMÁTICA</U></h2>
+    <h3>3ºAno Ensino Fundamental</h3>
+
+
+<h2> Vamos Praticar!</h2>
+
+<form method="POST">
+    <h2>{{n1}} {{operacao}} {{n2}} = ?</h2> 
+
+    <input type="number" name="resposta" required>
+
+    <!-- valores escondidos -->
+    <input type="hidden" name="n1" value="{{n1}}"> 
+    <input type="hidden" name="n2" value="{{n2}}">
+    <input type="hidden" name="operacao" value="{{operacao}}"> 
+
+    <br><br> 
+    <button type="submit">Responder</button> 
+</form>
+
+{% if resultado %} 
+    <h3>{{resultado}}</h3>
+{% endif %}    

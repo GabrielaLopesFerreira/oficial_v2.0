@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+
+body {
+    background-image: url("/static/pagina1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-align: center; /* CENTRALIZA TUDO */
+    font-family: Arial, sans-serif;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    color: #ffffff; /* branco */
+    background-color: rgba(0, 0, 0, 0.5); /* fundo escuro transparente */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* SUBTÍTULO */
+h2 {
+    color: yellow; /* amarelo */
+    background-color: rgba(0, 0, 0, 0.5); /* fundo escuro transparente */
+    display: inline-block;
+    padding: 8px 15px; 
+    border-radius: 10px;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjetoIntegrador</title>
+    
+</head>
+
+<body>
+    <h1>Bem-vindo ao Projeto Integrador UNIVESP!</h1>
+    <h2>Engenharia da Computação</h2>
+    <p>Aluna: Gabriela Lopes Ferreira<br>RA: 24214309 <br>Grupo 11</p> 
+
+    <h3><b>Tema</b></h3>
+    <h2><U>TECNOLOGIA COMO FERRAMENTA NA EDUCAÇÃO MATEMÁTICA</U></h2>
+
+
+    <p><a href="{{ url_for('routes.pagina2') }}">Clique aqui</a> para continuar</p>
+
+    <footer><i>Alvares Machado</i><br>2026</footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    background-image: url("/static/pagina2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: yellow;
+}
